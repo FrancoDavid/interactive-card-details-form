@@ -1,0 +1,8 @@
+.App_container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    height: 100vh;
+    padding: 20px;
+    margin: 20px;
+}
