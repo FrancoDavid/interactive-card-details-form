@@ -4,14 +4,19 @@
     gap: 10px;
     height: 100vh;
     padding: 20px;
-    margin: 20px;
+    margin: 50px;
+}
+
+.App_section_card_top {
+    display: flex;
+    justify-content: center;
+}
+
+.App_section_card_bottom {
+    display: flex;
+    justify-content: end;
 }
 
 .App_container_left {
-
-}
-
-.App_section_card {
-    display: flex;
-    justify-content: center;
+    align-items: center;
 }
