@@ -1,0 +1,67 @@
+.CardForm-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 8px;
+    padding: 6px;
+}
+
+.CardForm-row-multi {
+    display:grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 8px;
+}
+
+.CardForm-row-multi input {
+    /* width: 97%; */
+}
+
+.CardForm-row {
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.CardForm-label {
+    font-weight: bolder;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: 'Ubuntu', serif;
+    font-size: 12px;
+    color: #560c67;
+}
+
+.CardForm-input {
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+    color: #76057b;
+}
+
+.CardForm-input:focus {
+    border: 2px solid #ae00b6;
+}
+
+.CardForm-button {
+    background-color: #460252;
+    color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.CardForm-button:hover {
+    background-color: #700183;
+}
+
+.CardForm-label-error {
+    color: #f05858
+}
+

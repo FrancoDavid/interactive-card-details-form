@@ -17,6 +17,8 @@
     justify-content: end;
 }
 
-.App_container_left {
-    align-items: center;
+.App_container_right {
+    display: flex;
+    justify-content: center;
+    padding: 85px;
 }
