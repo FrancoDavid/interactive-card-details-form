@@ -8,8 +8,10 @@
 }
 
 .App_container_left {
+
+}
+
+.App_section_card {
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: 100vh;
 }

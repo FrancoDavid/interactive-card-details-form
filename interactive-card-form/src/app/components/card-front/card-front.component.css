@@ -1,12 +1,15 @@
 .CardFront_container {
     display: grid;
-    grid-template-rows: 3fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     padding: 15px 20px;
-    background-color: aliceblue;
     width: 310px;
     height: 205px;
-    border-radius: 10px;
+    max-height: 205px;
+    min-width: 310px;
     background-image: radial-gradient(circle at 20.66% 112.93%, #dd4873 0, #d73e7a 8.33%, #cf3281 16.67%, #c42687 25%, #b71a8e 33.33%, #a60e95 41.67%, #92059b 50%, #7908a1 58.33%, #5a13a8 66.67%, #261dae 75%, #0025b4 83.33%, #002cb8 91.67%, #0030bb 100%);
+    grid-gap: 10px;
+    border-radius: 10px;
+    margin-bottom: 24px;
 }
 
 .CardFront_row_top {
