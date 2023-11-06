@@ -9,4 +9,20 @@ body {
     background-size: 100% 100%, 100% 100%;
     background-repeat: no-repeat;
     font-family: 'Manrope', sans-serif;
-  }
+}
+
+.button-primary {
+  background-color: #460252;
+  color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 12px;
+  font-size: 15px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  margin-top: 16px;
+}
+
+.button-primary:hover {
+  background-color: #700183;
+}

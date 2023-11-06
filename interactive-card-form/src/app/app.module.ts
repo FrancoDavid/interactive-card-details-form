@@ -9,6 +9,7 @@ import { CardFormComponent } from './components/card-form/card-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OnlyNumbersDirective } from './directives/only-numbers/only-numbers.directive';
 import { FormatNumberCardDirective } from './directives/format-number-card/format-number-card.directive';
+import { CardSuccessComponent } from './components/card-success/card-success.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormatNumberCardDirective } from './directives/format-number-card/forma
     CardBackComponent,
     CardFormComponent,
     OnlyNumbersDirective,
-    FormatNumberCardDirective
+    FormatNumberCardDirective,
+    CardSuccessComponent
   ],
   imports: [
     BrowserModule,
