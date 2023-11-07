@@ -1,10 +1,18 @@
 .CardBack_container {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
-    width: 310px;
-    height: 205px;
+    width: 350px;
+    height: 225px;
+    max-height: 225px;
+    min-width: 350px;
     border-radius: 10px;
-    background-image: radial-gradient(circle at 13.99% 7.09%, #dadcc8 0, #d7dcc9 3.33%, #d4ddcb 6.67%, #d1decd 10%, #cedecf 13.33%, #cbdfd1 16.67%, #c9dfd3 20%, #c7dfd6 23.33%, #c5e0d9 26.67%, #c4e0db 30%, #c3e0de 33.33%, #c2e0e1 36.67%, #c2dfe3 40%, #c3dfe5 43.33%, #c4dfe7 46.67%, #c5dee9 50%, #c7ddea 53.33%, #c9ddec 56.67%, #ccdcec 60%, #cedbed 63.33%, #d1daed 66.67%, #d5d9ed 70%, #d8d9ec 73.33%, #dbd8eb 76.67%, #ded7ea 80%, #e1d6e8 83.33%, #e4d5e6 86.67%, #e7d5e4 90%, #e9d4e1 93.33%, #ebd4df 96.67%, #edd4dc 100%);
+    background-image: radial-gradient(circle at 13.99% 7.09%, #dadcc8 0, #d7dcc9 3.33%,
+    #d4ddcb 6.67%, #d1decd 10%, #cedecf 13.33%, #cbdfd1 16.67%, #c9dfd3 20%,
+    #c7dfd6 23.33%, #c5e0d9 26.67%, #c4e0db 30%, #c3e0de 33.33%, #c2e0e1 36.67%, 
+    #c2dfe3 40%, #c3dfe5 43.33%, #c4dfe7 46.67%, #c5dee9 50%, #c7ddea 53.33%, #c9ddec 56.67%,
+    #ccdcec 60%, #cedbed 63.33%, #d1daed 66.67%, #d5d9ed 70%, #d8d9ec 73.33%, #dbd8eb 76.67%,
+    #ded7ea 80%, #e1d6e8 83.33%, #e4d5e6 86.67%, #e7d5e4 90%, #e9d4e1 93.33%, #ebd4df 96.67%,
+    #edd4dc 100%);
 }
 
 .CardBack_row_top {

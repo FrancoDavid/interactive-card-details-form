@@ -1,14 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background: linear-gradient(to left, #FFFFFF 0%, #FFFFFF 60%, transparent 60%, transparent 100%),
+                linear-gradient(to right, rgb(70, 2, 82), transparent);
+  background-blend-mode: normal;
+  background-size: 100% 100%, 100% 100%;
+  background-repeat: no-repeat;
+  font-family: 'Manrope', sans-serif;
+}
+
 body {
     margin: 0;
     padding: 0;
-    height: 100vh;
-    background: linear-gradient(to left, #FFFFFF 0%, #FFFFFF 60%, transparent 60%, transparent 100%),
-                radial-gradient(circle at 26.82% 16.9%, #ce4974 0, #c84079 8.33%, #c0367e 16.67%, #b62d83 25%, #aa2388 33.33%, #9b1a8d 41.67%, #891392 50%, #741197 58.33%, #59159c 66.67%, #341ba1 75%, #0021a6 83.33%, #0027aa 91.67%, #002bac 100%);
-    background-blend-mode: normal;
-    background-size: 100% 100%, 100% 100%;
-    background-repeat: no-repeat;
-    font-family: 'Manrope', sans-serif;
 }
 
 .button-primary {
@@ -26,3 +28,4 @@ body {
 .button-primary:hover {
   background-color: #700183;
 }
+
