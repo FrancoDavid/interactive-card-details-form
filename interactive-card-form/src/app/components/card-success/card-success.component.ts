@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-card-success',
@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./card-success.component.css']
 })
 export class CardSuccessComponent {
+
+  @Output() continue: EventEmitter<void>;
+
+  constructor() {
+    this.continue = new EventEmitter<void>();
+  }
+
+  public onContinue(): void {
+    this.continue.emit();
+  }
 
 }

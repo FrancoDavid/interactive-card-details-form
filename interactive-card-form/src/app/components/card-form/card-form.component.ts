@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
@@ -7,6 +7,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./card-form.component.css']
 })
 export class CardFormComponent {
+
+  @Output() finish: EventEmitter<void>; 
 
   public cardForm: FormGroup;
   public isSubmitted: boolean;
@@ -20,24 +22,17 @@ export class CardFormComponent {
       cvcCard: ['',[Validators.required, Validators.minLength(3)]]
     });
     this.isSubmitted = false;
-  }
-
-  public get controls() {
-    return this.cardForm.controls;
+    this.finish  = new EventEmitter<void>(false);
   }
 
   public onSubmit(): void {
-    console.log('onSubmit');
+
     this.isSubmitted = true;
-
-    console.log(this.controls);
-
 
     if (this.cardForm.invalid) {
       return;
     }
+
+    this.finish.emit();
   }
-
-
-
 }

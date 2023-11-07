@@ -8,7 +8,14 @@
     </section>
   </div>
   <div class="App_container_right">
-    <!-- <app-card-form></app-card-form> -->
-    <app-card-success></app-card-success>
+    <app-card-form
+      *ngIf="!controlLayout.isFinished"
+      (finish)="onFinish()">
+    </app-card-form>
+    
+    <app-card-success
+      *ngIf="controlLayout.isFinished"
+      (continue)="onContinue()">
+    </app-card-success>
   </div>
 </div>

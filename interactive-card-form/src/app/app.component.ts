@@ -6,5 +6,21 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'interactive-card-form';
+
+  public controlLayout: { isFinished: boolean };
+
+  constructor() {
+    this.controlLayout = {
+      isFinished: false
+    };
+  }
+
+  public onFinish(): void {
+    this.controlLayout.isFinished = true;
+  }
+
+  public onContinue(): void {
+    this.controlLayout.isFinished = false;
+  }
+
 }
