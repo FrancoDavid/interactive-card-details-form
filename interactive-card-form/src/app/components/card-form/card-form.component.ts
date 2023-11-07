@@ -1,5 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { CardService } from 'src/app/services/card.service';
+import { Card } from 'src/app/types/card.type';
 
 @Component({
   selector: 'app-card-form',
@@ -8,12 +10,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class CardFormComponent {
 
-  @Output() finish: EventEmitter<void>; 
+  @Output() finish: EventEmitter<void>;
 
   public cardForm: FormGroup;
   public isSubmitted: boolean;
 
-  constructor(private _formBuiler: FormBuilder) {
+  constructor(private _formBuiler: FormBuilder,
+              private _cardService: CardService) {
     this.cardForm = this._formBuiler.group({
       nameCard: ['', Validators.required],
       numberCard: ['', [Validators.required, Validators.minLength(19)]],
@@ -22,6 +25,7 @@ export class CardFormComponent {
       cvcCard: ['',[Validators.required, Validators.minLength(3)]]
     });
     this.isSubmitted = false;
+
     this.finish  = new EventEmitter<void>(false);
   }
 
@@ -34,5 +38,15 @@ export class CardFormComponent {
     }
 
     this.finish.emit();
+  }
+
+  public onWrite(): void {
+    this._cardService.emitterCard({
+      name: this.cardForm.controls['nameCard'].value,
+      number: this.cardForm.controls['numberCard'].value,
+      month: this.cardForm.controls['monthCard'].value,
+      year: this.cardForm.controls['yearCard'].value,
+      cvc: this.cardForm.controls['cvcCard'].value
+    });
   }
 }

@@ -10,6 +10,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { OnlyNumbersDirective } from './directives/only-numbers/only-numbers.directive';
 import { FormatNumberCardDirective } from './directives/format-number-card/format-number-card.directive';
 import { CardSuccessComponent } from './components/card-success/card-success.component';
+import { TruncateTextPipe } from './pipes/truncate-text/truncate-text.pipe';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CardSuccessComponent } from './components/card-success/card-success.com
     CardFormComponent,
     OnlyNumbersDirective,
     FormatNumberCardDirective,
-    CardSuccessComponent
+    CardSuccessComponent,
+    TruncateTextPipe
   ],
   imports: [
     BrowserModule,
