@@ -13,3 +13,12 @@
     color: white;
     font-size: 25px;
 }
+
+.CardSuccess-row {
+    display: flex;
+    justify-content: center;
+}
+
+.CardSucces-container {
+    text-align: center;
+}
