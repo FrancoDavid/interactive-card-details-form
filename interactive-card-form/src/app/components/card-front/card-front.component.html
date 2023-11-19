@@ -1,14 +1,15 @@
-<section class="CardFront_container">
-    <div class="CardFront_row_top">
-        <div class="CardFront_circle_lg"></div>
-        <div class="CardFront_circle_xs"></div>
-    </div>
-    
-    <div class="CardFront_row_middle">
-        <p class="CardFront_number_main">{{card?.number}}</p>
-    </div>
-    <div class="CardFront_row_bottom">
-        <p class="CardFront_description">{{card?.name || '' | truncateText: 20 }}</p>
-        <p class="CardFront_description">{{card?.month}}/{{card?.year}}</p>
-    </div>
+<section class="card-front--container">
+    <aside class="card-front--card">
+        <div class="card--header">
+            <aside class="card-header--circle__lg"></aside>
+            <aside class="card-header--circle__xs"></aside>
+        </div>
+        <div class="card--body">
+            <p>{{card?.number}}</p>
+        </div>
+        <div class="card--footer">
+            <p>{{card?.name || '' | truncateText: 20 }}</p>
+            <p>{{card?.month}}/{{card?.year}}</p>
+        </div>
+    </aside>
 </section>

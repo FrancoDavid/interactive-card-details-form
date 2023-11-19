@@ -1,36 +1,52 @@
-.CardFront_container {
-    display: grid;
-    grid-template-rows: 2fr 1fr 1fr;
-    padding: 15px 20px;
-    width: 310px;
-    height: 205px;
-    max-height: 205px;
-    min-width: 310px;
+
+.card-front--container {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+
+    z-index: 1;
+
+    top: 125px;
+    margin-right: 10%;
+}
+
+.card-front--card {
+    width: 230px;
+    height: 150px;
+
     background-image: radial-gradient(circle at 20.66% 112.93%,
     #dd4873 0, #d73e7a 8.33%, #cf3281 16.67%, #c42687 25%,
     #b71a8e 33.33%, #a60e95 41.67%, #92059b 50%, #7908a1 58.33%,
     #5a13a8 66.67%, #261dae 75%, #0025b4 83.33%, #002cb8 91.67%, #0030bb 100%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
     border-radius: 10px;
-    margin-bottom: 24px;
-}
 
-.CardFront_row_top {
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+
+    padding: 15px 20px;
+
+    margin: 0 auto;
 }
 
+.card--header {
+    display: flex;
+    justify-content: flex-start;
+}
 
-.CardFront_circle_lg {
+.card-header--circle__lg {
     background-color: white;
     border-radius: 100%;
     padding: 10px;
     width: 24px;
-    height: 20px;
+    height: 24px;
     border-color: white;
-    margin: 10px;
 }
 
-.CardFront_circle_xs {
+.card-header--circle__xs {
     background-color: transparent;
     border: 1px solid white;
     border-radius: 100%;
@@ -41,26 +57,33 @@
     align-self: center;
 }
 
-.CardFront_row_middle {
+.card--body {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    
+    padding: 40px 0 10px 0;
 }
 
-.CardFront_number_main {
+.card--body p {
     color: white;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 3px;
 }
 
-.CardFront_row_bottom {
+.card--footer {
     display: flex;
     justify-content: space-between;
-}
 
-.CardFront_description {
     color: white;
-    font-size: 14px;
+    font-size: 1.2rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+}
+
+
+@media only screen and (max-width: 2560px) and (min-width:1024px) {
+    .card-front--card {
+        margin-left: calc(20% - 120px) ;
+    }
 }

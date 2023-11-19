@@ -12,10 +12,6 @@
     gap: 8px;
 }
 
-.CardForm-row-multi input {
-    /* width: 97%; */
-}
-
 .CardForm-row {
     display:grid;
     grid-template-columns: 1fr;
@@ -47,6 +43,21 @@
 
 .CardForm-label-error {
     color: #f05858
+}
+
+
+/* Consulta de medios para pantallas de hasta 768px */
+@media (max-width: 768px) {
+    .CardForm-row-multi {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Consulta de medios para pantallas de hasta 480px */
+@media (max-width: 480px) {
+    .CardForm-row {
+        grid-template-columns: 1fr;
+    }
 }
 
 
