@@ -85,5 +85,34 @@
 @media only screen and (max-width: 2560px) and (min-width:1024px) {
     .card-front--card {
         margin-left: calc(20% - 120px) ;
+        
+        width: 447px;
+        height: 244px;
+
+        padding: 27px 30px;
     }
+
+    .card-header--circle__lg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-header--circle__xs {
+        width: 20px;
+        height: 20px;
+        margin: 10px;
+    }
+
+    .card--body {
+        padding: 50px 0 20px 0;
+    }
+
+    .card--body p {
+        font-size: 3rem;
+    }
+
+    .card--footer {
+        font-size: 2.4rem;
+    }
+
 }
