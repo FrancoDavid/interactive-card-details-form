@@ -1,34 +1,58 @@
-.CardForm-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    gap: 8px;
-    padding: 6px;
+.card-form--container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
-.CardForm-row-multi {
-    display:grid;
-    grid-template-columns: 1fr 1fr 2fr;
-    gap: 8px;
+.card-form--row-one {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-.CardForm-row {
-    display:grid;
-    grid-template-columns: 1fr;
-    gap: 8px;
-    margin-bottom: 16px;
+.card-form--row-two {
+    display: flex;
+    justify-content: flex-start;
+    gap: 9px;
 }
 
-.CardForm-label {
+.card-form--row-three {
+    display: flex;
+    gap: 13px;
+
+    width: 100%;
+    height: auto;
+}
+
+.card-form--column__grow1 {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.card-form--column__grow2 {
+    display: flex;
+    flex-direction: column;
+    width: calc(51% - 10px);
+    min-width: 100px;
+}
+
+.card-form--label {
     font-weight: bolder;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-family: 'Ubuntu', serif;
-    font-size: 12px;
+    font-size: 1.2rem;
     color: #560c67;
+    margin-bottom: 3px;
 }
 
-.CardForm-input {
+.card-form--label__error {
+    color: #f05858
+}
+
+.card-form--input {
     border: 1px solid #cccccc;
     border-radius: 5px;
     padding: 10px;
@@ -37,26 +61,17 @@
     color: #76057b;
 }
 
-.CardForm-input:focus {
+.card-form--input:focus {
     border: 2px solid #ae00b6;
 }
 
-.CardForm-label-error {
-    color: #f05858
-}
 
 
-/* Consulta de medios para pantallas de hasta 768px */
-@media (max-width: 768px) {
-    .CardForm-row-multi {
-        grid-template-columns: 1fr;
-    }
-}
-
-/* Consulta de medios para pantallas de hasta 480px */
-@media (max-width: 480px) {
-    .CardForm-row {
-        grid-template-columns: 1fr;
+@media only screen and (max-width: 2560px) and (min-width:600px) {
+    .card-form--container {
+        width: 70%;
+        height: auto;
+        margin: 0 auto;
     }
 }
 

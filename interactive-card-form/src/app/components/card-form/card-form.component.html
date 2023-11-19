@@ -1,4 +1,4 @@
-<div class="CardForm-container">
+<!-- <div class="CardForm-container">
     <form [formGroup]="cardForm">
         <section class="CardForm-row">
             <label for="" class="CardForm-label">Cardholder name</label>
@@ -58,4 +58,75 @@
             <button class="button-primary" type="button" (click)="onSubmit()">Confirm</button>
         </section>
     </form>
-</div>
+</div> -->
+
+
+<aside class="card-form--container">
+    <form [formGroup]="cardForm">
+        <div class="card-form--row-one">
+            <label for="name-card" class="card-form--label">Cardholder name</label>
+            <input id="name-card" class="card-form--input" formControlName="nameCard" placeholder="e.g. Jane Appleseed"
+                (keyup)="onWrite()" />
+            <small class="card-form--label__error" *ngIf="isSubmitted && cardForm.get('nameCard')?.invalid">Can`t
+                blank</small>
+        </div>
+
+        <div class="card-form--row-one">
+            <label for="number-card" class="card-form--label">Card number</label>
+            <input class="card-form--input" formControlName="numberCard" placeholder="e.g. 1234 5678 9123 1234"
+                appOnlyNumbers appFormatNumberCard maxlength="19" (keyup)="onWrite()" />
+    
+            <section *ngIf="isSubmitted && cardForm.get('numberCard')?.invalid">
+                <small class="card-form--label__error" *ngIf="cardForm.get('numberCard')?.hasError('required')">Can`t
+                    blank</small>
+                <small class="card-form--label__error" *ngIf="cardForm.get('numberCard')?.hasError('minlength')">Wrong
+                    format</small>
+            </section>
+        </div>
+
+        <div class="card-form--row-two">
+            <label for="month-card" class="card-form--label">Exp.date (MM / YYYY)</label>
+            <label for="cvc-card" class="card-form--label">CVC</label>
+        </div>
+
+
+        <div class="card-form--row-three">
+            <div class="card-form--column__grow1">
+                <input id="month-card" class="card-form--input" formControlName="monthCard" placeholder="MM" appOnlyNumbers
+                    maxlength="2" (keyup)="onWrite()"/>
+                <section *ngIf="isSubmitted && cardForm.get('monthCard')?.invalid">
+                    <small class="card-form--label__error" *ngIf="cardForm.get('monthCard')?.hasError('required')">Can`t
+                        blank</small>
+                    <small class="card-form--label__error" *ngIf="cardForm.get('monthCard')?.hasError('minlength')">Wrong
+                        format</small>
+                </section>
+            </div>
+            <div class="card-form--column__grow1">
+                <input id="year-card" class="card-form--input" formControlName="yearCard" placeholder="YYYY" appOnlyNumbers
+                    maxlength="4" (keyup)="onWrite()"/>
+                <section *ngIf="isSubmitted && cardForm.get('yearCard')?.invalid">
+                    <small class="card-form--label__error" *ngIf="cardForm.get('yearCard')?.hasError('required')">Can`t
+                        blank</small>
+                    <small class="card-form--label__error" *ngIf="cardForm.get('yearCard')?.hasError('minlength')">Wrong
+                        format</small>
+                </section>
+            </div>
+            <div class="card-form--column__grow2">
+                <input id="cvc-card" class="card-form--input" formControlName="cvcCard" placeholder="e.g. 123" appOnlyNumbers
+                        maxlength="3" (keyup)="onWrite()"/>
+                <section *ngIf="isSubmitted && cardForm.get('cvcCard')?.invalid">
+                    <small class="card-form--label__error" *ngIf="cardForm.get('cvcCard')?.hasError('required')">Can`t
+                        blank</small>
+                    <small class="card-form--label__error" *ngIf="cardForm.get('cvcCard')?.hasError('minlength')">Wrong
+                        format</small>
+                </section>
+            </div>
+        </div>
+
+        <div class="card-form--row-one">
+            <button class="button-primary" type="button" (click)="onSubmit()">Confirm</button>
+        </div>
+
+        
+    </form>
+</aside>
