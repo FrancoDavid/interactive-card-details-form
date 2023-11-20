@@ -1,13 +1,11 @@
-<!-- <div class="App_container">
-  <div class="App_container_left">
-    <section class="App_section_card_top">
-      <app-card-front></app-card-front>
-    </section>
-    <section class="App_section_card_bottom">
-      <app-card-back></app-card-back>
-    </section>
-  </div>
-  <div class="App_container_right">
+<main>
+
+  <section class="app-container--left-top">
+    <app-card-front></app-card-front>
+    <app-card-back></app-card-back>
+  </section>
+
+  <section class="app-container--rigth-bottom">
     <app-card-form
       *ngIf="!controlLayout.isFinished"
       (finish)="onFinish()">
@@ -17,18 +15,6 @@
       *ngIf="controlLayout.isFinished"
       (continue)="onContinue()">
     </app-card-success>
-  </div>
-</div> -->
-
-<main>
-
-  <section class="app-container--left-top">
-    <app-card-front></app-card-front>
-    <app-card-back></app-card-back>
-  </section>
-
-  <section class="app-container--rigth-bottom">
-    <app-card-form></app-card-form>
   </section>
 
 </main>

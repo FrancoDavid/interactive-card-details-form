@@ -49,7 +49,9 @@
 }
 
 .card-form--label__error {
-    color: #f05858
+    color: #f05858;
+    font-size: 1.2rem;
+    margin-top: 5px;
 }
 
 .card-form--input {
