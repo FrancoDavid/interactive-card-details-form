@@ -65,7 +65,7 @@
 
 .card--body p {
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 3px;
 }
@@ -112,7 +112,7 @@
     }
 
     .card--body p {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
 
     .card--footer {
